@@ -1,0 +1,202 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefefe;
+}
+
+section.upload {
+  margin-top: 50px;
+}
+
+label.target {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px dashed #616778;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+label.target:hover {
+  color: #616778;
+  border-color: #9a9fad;
+}
+
+label.target:hover svg path {
+  fill: #616778;
+}
+
+.icon {
+  margin: 20px auto;
+  display: block;
+}
+
+label.target p {
+  margin: 0 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+label.target p small {
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+label.target input[type="file"] {
+  display: none;
+}
+
+section.files {
+  margin: 50px auto 120px auto;
+  max-width: 800px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #bbcbd0;
+}
+
+section.files ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section.files ul li {
+  margin: 4px;
+  border: 1px solid #cfdbde;
+  background: #f0f0f0;
+  padding: 0 12px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #363a43;
+  border-radius: 2px;
+  font-size: 12px;
+
+  align-items: center;
+}
+section.files ul li .overview-block {
+  display: flex;
+  align-items: center;
+}
+
+section.files ul li .before {
+  max-width: 300px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+section.files ul li .before > .size {
+  color: #7eb631;
+  font-weight: normal;
+  width: 60px;
+  float: right;
+  margin-left: 10px;
+  display: block;
+}
+
+.progress {
+  display: block;
+  min-height: 22px;
+  width: 290px;
+  background: white;
+  border: 1px solid #cfdbde;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 2px;
+  margin: 4px 0;
+  position: relative;
+}
+
+.progress .bar {
+  min-height: 22px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 300;
+  min-width: 22px;
+}
+
+.progress .bar span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+.progress--pending .bar {
+  background-color: #cfdbde;
+}
+
+.progress--uploading .bar {
+  background-color: #48d9ea;
+}
+
+.progress--success .bar {
+  width: 100%;
+  background-color: #92ed14;
+  transition: background-color 300ms ease-in;
+  transition: width 300ms ease-in;
+}
+.progress--failure .bar {
+  width: 100%;
+  background-color: red;
+  color: white;
+  transition: background-color 300ms ease-in;
+  transition: width 300ms ease-in;
+}
+
+section.files > ul li div.after {
+  text-align: right;
+  flex: 1;
+}
+
+section.files > ul li div.after a,
+section.files > ul li div.after .details {
+  margin: 0 4px;
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  color: #363a43;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+section.files ul li .details-block {
+  width: 100%;
+}
+
+section.files ul li .details-block img {
+  width: 200px;
+  height: auto;
+}
+
+.copy-clipboard-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+}
+
+.path_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.path_row button {
+  margin-left: auto;
+}
